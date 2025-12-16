@@ -1,4 +1,5 @@
 
+from typing import Final as Const
 from fastapi import APIRouter, Depends, Request, status
 from fastapi.security import OAuth2PasswordRequestForm
 
@@ -7,7 +8,8 @@ from app.core.security import AuthToken, ROLES
 from app.utils import security
 from app.utils.protection import rate_limiter
 
-router: APIRouter = APIRouter(prefix='/login', tags=['auth'])
+PATH: Const[str] = '/login'
+router: APIRouter = APIRouter(prefix=PATH, tags=['auth'])
 
 # ╔══════════════════════════════╗ #
 # ║        LOGIN ENDPOINT        ║ #
