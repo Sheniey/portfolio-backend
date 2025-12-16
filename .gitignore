@@ -1,0 +1,24 @@
+
+# python ignores
+__pycache__
+venv
+
+# sensitive data
+.env
+.env.dev
+.env.build
+logs/
+*.log
+
+# build files
+build/
+dist/
+
+# private schemes files
+*.json
+*.toml
+*.yaml
+*.yml
+
+# test files
+tests/

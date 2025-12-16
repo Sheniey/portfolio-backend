@@ -1,0 +1,16 @@
+
+# global dependencies
+dotenv
+
+# api building
+fastapi[all]
+pydantic
+pymongo
+
+# security
+bcrypt<4.1.0
+passlib
+python-jose
+
+# protections
+slowapi
