@@ -24,7 +24,7 @@ dotenv.load_dotenv()
 # ╚══════════════════════════════╝ #
 MONGO_URL: str | None = os.getenv('MONGO_URL')
 if not MONGO_URL:
-    raise RuntimeError("MONGO_URL is not set")
+    raise RuntimeError(f"MONGO_URL is not set: [{MONGO_URL}]")
 
 # ╔══════════════════════════════╗ #
 # ║        .ENV VARIABLES        ║ #
