@@ -1,5 +1,6 @@
 
 import dotenv, os, random
+from pathlib import Path
 
 from app.core.security import pwd_context
 from app.core.consts import JWT_ALGORITHMS
@@ -34,8 +35,8 @@ ACCESS_TOKEN_EXPIRE: int = int(os.getenv('ACCESS_TOKEN_EXPIRE', 60))  # kill tok
 # ║      LOGGING VARIABLES       ║ #
 # ╚══════════════════════════════╝ #
 LOGGING_FILE: str = os.getenv('AUDIT_LOG_FILE', 'logs/audit.log')
-with open(LOGGING_FILE, 'a+') as f:
-    pass
+log_path: Path = Path(LOGGING_FILE)
+log_path.parent.mkdir(parents=True, exist_ok=True)
 
 # ╔══════════════════════════════╗ #
 # ║        ROLE PASSWORDS        ║ #
