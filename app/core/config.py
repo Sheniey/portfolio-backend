@@ -16,9 +16,7 @@ __all__ = [
     'RATE_LIMIT_PERIOD',
 ]
 
-dotenv.load_dotenv(
-    dotenv_path=dotenv.find_dotenv('.env', True)
-)
+dotenv.load_dotenv()
 
 # ╔══════════════════════════════╗ #
 # ║         DB VARIABLES         ║ #
