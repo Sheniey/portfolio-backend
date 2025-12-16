@@ -34,6 +34,8 @@ ACCESS_TOKEN_EXPIRE: int = int(os.getenv('ACCESS_TOKEN_EXPIRE', 60))  # kill tok
 # ║      LOGGING VARIABLES       ║ #
 # ╚══════════════════════════════╝ #
 LOGGING_FILE: str = os.getenv('AUDIT_LOG_FILE', 'logs/audit.log')
+with open(LOGGING_FILE, 'a+') as f:
+    pass
 
 # ╔══════════════════════════════╗ #
 # ║        ROLE PASSWORDS        ║ #
