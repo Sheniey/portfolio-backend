@@ -1,6 +1,6 @@
 dotenv
 fastapi[all]
-unvicorn[standard]
+uvicorn[standard]
 pydantic
 pymongo
 bcrypt<4.1.0
